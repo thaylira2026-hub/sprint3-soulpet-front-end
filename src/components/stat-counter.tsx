@@ -27,9 +27,9 @@ const StatCounter = ({ target, label }: StatCounterProps) => {
   }, [target])
 
   return (
-    <div>
-      <div>{count}+</div>
-      <div>{label}</div>
+    <div className="text-center">
+      <div className="font-display text-3xl font-bold text-primary">{count}+</div>
+      <div className="text-sm text-text-muted">{label}</div>
     </div>
   )
 }
