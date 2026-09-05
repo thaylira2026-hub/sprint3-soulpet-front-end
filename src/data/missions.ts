@@ -1,6 +1,9 @@
+export type MissionLevel = 'easy' | 'medium' | 'hard'
+
 export interface Mission {
+  id: string
   icon: string
-  level: 'easy' | 'medium' | 'hard'
+  level: MissionLevel
   difficulty: string
   tag: string
   title: string
@@ -10,7 +13,9 @@ export interface Mission {
 }
 
 export const missions: Mission[] = [
+  // 🟢 Fácil
   {
+    id: '1',
     icon: '💙',
     level: 'easy',
     difficulty: '🟢 Fácil',
@@ -21,6 +26,7 @@ export const missions: Mission[] = [
     deadline: 'Até 24h',
   },
   {
+    id: '2',
     icon: '💬',
     level: 'easy',
     difficulty: '🟢 Fácil',
@@ -31,6 +37,7 @@ export const missions: Mission[] = [
     deadline: 'Até 24h',
   },
   {
+    id: '3',
     icon: '🔔',
     level: 'easy',
     difficulty: '🟢 Fácil',
@@ -41,6 +48,7 @@ export const missions: Mission[] = [
     deadline: 'Até 24h',
   },
   {
+    id: '4',
     icon: '📲',
     level: 'easy',
     difficulty: '🟢 Fácil',
@@ -50,7 +58,10 @@ export const missions: Mission[] = [
     points: 60,
     deadline: 'Até 24h',
   },
+
+  // 🟡 Médio
   {
+    id: '5',
     icon: '🏠',
     level: 'medium',
     difficulty: '🟡 Médio',
@@ -61,6 +72,7 @@ export const missions: Mission[] = [
     deadline: 'Até 7 dias',
   },
   {
+    id: '6',
     icon: '📸',
     level: 'medium',
     difficulty: '🟡 Médio',
@@ -71,6 +83,7 @@ export const missions: Mission[] = [
     deadline: 'Até 7 dias',
   },
   {
+    id: '7',
     icon: '🩺',
     level: 'medium',
     difficulty: '🟡 Médio',
@@ -81,6 +94,7 @@ export const missions: Mission[] = [
     deadline: 'Até 7 dias',
   },
   {
+    id: '8',
     icon: '🎥',
     level: 'medium',
     difficulty: '🟡 Médio',
@@ -90,7 +104,10 @@ export const missions: Mission[] = [
     points: 120,
     deadline: 'Até 7 dias',
   },
+
+  // 🔴 Difícil
   {
+    id: '9',
     icon: '🏡',
     level: 'hard',
     difficulty: '🔴 Difícil',
@@ -101,6 +118,7 @@ export const missions: Mission[] = [
     deadline: 'Até 30 dias',
   },
   {
+    id: '10',
     icon: '🎉',
     level: 'hard',
     difficulty: '🔴 Difícil',
@@ -111,6 +129,7 @@ export const missions: Mission[] = [
     deadline: 'Até 30 dias',
   },
   {
+    id: '11',
     icon: '🤝',
     level: 'hard',
     difficulty: '🔴 Difícil',
@@ -121,6 +140,7 @@ export const missions: Mission[] = [
     deadline: 'Até 30 dias',
   },
   {
+    id: '12',
     icon: '📰',
     level: 'hard',
     difficulty: '🔴 Difícil',
