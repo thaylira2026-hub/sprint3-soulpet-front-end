@@ -13,46 +13,50 @@ const Home = () => {
   return (
     <main>
       {/* Hero */}
-      <section aria-labelledby="hero-title">
-        <div>
-          <div>
-            <div>
-              <span>🐾</span> Comunidade SoulUp
-            </div>
+      <section className="bg-bg px-6 py-20" aria-labelledby="hero-title">
+        <div className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto inline-flex items-center gap-2 rounded-full bg-lilac-light px-4 py-1 text-sm font-semibold text-primary">
+            <span>🐾</span> Comunidade SoulUp
+          </div>
 
-            <h1 id="hero-title">
-              Ajude pets,<br />
-              <span>ganhe recompensas</span>
-            </h1>
+          <h1 id="hero-title" className="mt-4 font-display text-4xl font-bold text-text-dark md:text-5xl">
+            Ajude pets,<br />
+            <span className="text-primary">ganhe recompensas</span>
+          </h1>
 
-            <p>
-              Na SoulPet você completa missões, acumula pontos e troca por produtos reais para o seu pet — tudo de graça e pelo bem dos animais!
-            </p>
+          <p className="mt-4 text-text-body">
+            Na SoulPet você completa missões, acumula pontos e troca por produtos reais para o seu pet — tudo de graça e pelo bem dos animais!
+          </p>
 
-            <div>
-              <Link to="/sobre">Conhecer o projeto</Link>
-              <Link to="/missoes">Ver missões</Link>
-            </div>
+          <div className="mt-6 flex justify-center gap-4">
+            <Link to="/sobre" className="rounded-full border border-primary px-6 py-3 font-semibold text-primary hover:bg-lilac-light">
+              Conhecer o projeto
+            </Link>
+            <Link to="/missoes" className="rounded-full bg-primary px-6 py-3 font-semibold text-white hover:bg-secondary">
+              Ver missões
+            </Link>
+          </div>
 
-            <div>
-              <StatCounter target={1200} label="Missões disponíveis" />
-              <StatCounter target={50} label="Recompensas" />
-              <StatCounter target={5000} label="Pets beneficiados" />
-            </div>
+          <div className="mt-10 flex justify-center gap-10">
+            <StatCounter target={1200} label="Missões disponíveis" />
+            <StatCounter target={50} label="Recompensas" />
+            <StatCounter target={5000} label="Pets beneficiados" />
           </div>
         </div>
       </section>
 
       {/* Como funciona */}
-      <section aria-labelledby="how-title">
-        <div>
-          <div>
-            <span>✨ Como funciona</span>
-            <h2 id="how-title">Simples, divertido e <span>recompensador</span></h2>
-            <p>Três passos para transformar o seu amor pelos pets em recompensas reais.</p>
+      <section className="px-6 py-16" aria-labelledby="how-title">
+        <div className="mx-auto max-w-5xl">
+          <div className="text-center">
+            <span className="text-sm font-semibold text-secondary">✨ Como funciona</span>
+            <h2 id="how-title" className="mt-2 font-display text-3xl font-bold text-text-dark">
+              Simples, divertido e <span className="text-primary">recompensador</span>
+            </h2>
+            <p className="mt-2 text-text-body">Três passos para transformar o seu amor pelos pets em recompensas reais.</p>
           </div>
 
-          <div>
+          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
             <FeatureCard
               icon="🎯"
               title="Complete Missões"
@@ -73,25 +77,21 @@ const Home = () => {
       </section>
 
       {/* Missões em destaque */}
-      <section aria-labelledby="missions-title">
-        <div>
-          <div>
-            <span>🎯 Missões</span>
-            <h2 id="missions-title">Missões para <span>todos os níveis</span></h2>
-            <p>Fácil, médio ou difícil — escolha o seu ritmo e comece a ganhar pontos agora!</p>
+      <section className="bg-bg px-6 py-16" aria-labelledby="missions-title">
+        <div className="mx-auto max-w-5xl">
+          <div className="text-center">
+            <span className="text-sm font-semibold text-secondary">🎯 Missões</span>
+            <h2 id="missions-title" className="mt-2 font-display text-3xl font-bold text-text-dark">
+              Missões para <span className="text-primary">todos os níveis</span>
+            </h2>
+            <p className="mt-2 text-text-body">Fácil, médio ou difícil — escolha o seu ritmo e comece a ganhar pontos agora!</p>
           </div>
 
-          <div role="tablist" aria-label="Filtro de missões">
-            <button role="tab" aria-selected="true">Todas</button>
-            <button role="tab" aria-selected="false">🟢 Fácil</button>
-            <button role="tab" aria-selected="false">🟡 Médio</button>
-            <button role="tab" aria-selected="false">🔴 Difícil</button>
-          </div>
-
-          <div aria-live="polite">
+          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
             {featuredMissions.map((mission) => (
               <MissionCard
-                key={mission.title}
+                key={mission.id}
+                id={mission.id}
                 icon={mission.icon}
                 difficulty={mission.difficulty}
                 tag={mission.tag}
@@ -103,48 +103,49 @@ const Home = () => {
             ))}
           </div>
 
-          <div>
-            <Link to="/missoes">Ver todas as missões →</Link>
+          <div className="mt-8 text-center">
+            <Link to="/missoes" className="font-semibold text-primary hover:underline">
+              Ver todas as missões →
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Recompensas em destaque */}
-      <section aria-labelledby="rewards-title">
-        <div>
-          <div>
-            <span>🎁 Recompensas</span>
-            <h2 id="rewards-title">Troque pontos por <span>produtos reais</span></h2>
-            <p>Sem gastar dinheiro! Use seus pontos para resgatar produtos de qualidade para o seu pet.</p>
+      <section className="px-6 py-16" aria-labelledby="rewards-title">
+        <div className="mx-auto max-w-5xl">
+          <div className="text-center">
+            <span className="text-sm font-semibold text-secondary">🎁 Recompensas</span>
+            <h2 id="rewards-title" className="mt-2 font-display text-3xl font-bold text-text-dark">
+              Troque pontos por <span className="text-primary">produtos reais</span>
+            </h2>
+            <p className="mt-2 text-text-body">Sem gastar dinheiro! Use seus pontos para resgatar produtos de qualidade para o seu pet.</p>
           </div>
 
-          <div>
+          <div className="mt-10 grid grid-cols-2 gap-6 md:grid-cols-4">
             {featuredRewards.map((reward) => (
-              <RewardCard
-                key={reward.name}
-                emoji={reward.emoji}
-                name={reward.name}
-                points={reward.points}
-              />
+              <RewardCard key={reward.name} emoji={reward.emoji} name={reward.name} points={reward.points} />
             ))}
           </div>
 
-          <div>
-            <Link to="/recompensas">Ver loja completa →</Link>
+          <div className="mt-8 text-center">
+            <Link to="/recompensas" className="font-semibold text-primary hover:underline">
+              Ver loja completa →
+            </Link>
           </div>
         </div>
       </section>
 
       {/* CTA final */}
-      <section aria-labelledby="cta-title">
-        <div>
-          <span>🐾 Junte-se a nós</span>
-          <h2 id="cta-title">Pronto para começar a ajudar?</h2>
-          <p>
-            Entre para a SoulPet, complete missões e faça parte de uma comunidade que transforma o amor por pets em impacto real.
-          </p>
-          <Link to="/sobre">Saiba mais sobre o projeto</Link>
-        </div>
+      <section className="bg-primary px-6 py-16 text-center text-white" aria-labelledby="cta-title">
+        <span className="text-sm font-semibold text-lilac-light">🐾 Junte-se a nós</span>
+        <h2 id="cta-title" className="mt-2 font-display text-3xl font-bold">Pronto para começar a ajudar?</h2>
+        <p className="mx-auto mt-2 max-w-xl text-lilac-light">
+          Entre para a SoulPet, complete missões e faça parte de uma comunidade que transforma o amor por pets em impacto real.
+        </p>
+        <Link to="/sobre" className="mt-6 inline-block rounded-full bg-white px-6 py-3 font-semibold text-primary hover:bg-lilac-light">
+          Saiba mais sobre o projeto
+        </Link>
       </section>
     </main>
   )
