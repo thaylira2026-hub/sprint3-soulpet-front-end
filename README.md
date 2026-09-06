@@ -98,7 +98,7 @@ Acesse `http://localhost:5173` no navegador. 🎉
 
 | Foto | Nome | RM | GitHub | LinkedIn |
 |---|---|---|---|---|
-| <img src="public/img/foto_bianca.JPEG" width="60" style="border-radius:50%"> | Bianca Pereira da Silva | 571077 | [@biancapereirasilva](https://github.com/biancapereirasilva) | [🔗 LinkedIn](https://www.linkedin.com/in/bianca-pereira-866845213/) |
+| <img src="public/img/foto_bianca.jpeg" width="60" style="border-radius:50%"> | Bianca Pereira da Silva | 571077 | [@biancapereirasilva](https://github.com/biancapereirasilva) | [🔗 LinkedIn](https://www.linkedin.com/in/bianca-pereira-866845213/) |
 | <img src="public/img/foto_isa.jpeg" width="60" style="border-radius:50%"> | Isabelle Souza Lima Pires Araujo | 569370 | [@isasouzz](https://github.com/isasouzz) | [🔗 LinkedIn](https://www.linkedin.com/in/isabelle-souza-9342a027a/) |
 | <img src="public/img/foto_duda.jpeg" width="60" style="border-radius:50%"> | Maria Eduarda Cavallari Quarelo | 570462 | [@dudaquarelo](https://github.com/dudaquarelo) | [🔗 LinkedIn](https://www.linkedin.com/in/maria-eduarda-quarelo-678a0840a/?skipRedirect=true) |
 | <img src="public/img/foto_thays.jpeg" width="60" style="border-radius:50%"> | Thays Lira de Oliveira | 568799 | [@thaylira2026-hub](https://github.com/thaylira2026-hub) | [🔗 LinkedIn](https://www.linkedin.com/in/thays-lira-538619186/) |
