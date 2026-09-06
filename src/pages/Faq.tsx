@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import FaqItem  from '../components/faq-item.tsx'
-import { faqCategories } from '../data/faq'
+import { faqCategories } from '../data/faq.ts'
 
 const Faq = () => {
   return (
