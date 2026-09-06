@@ -1,4 +1,4 @@
-export type TeamMember = {
+export interface TeamMember {
   photo: string
   name: string
   rm: string
@@ -7,13 +7,6 @@ export type TeamMember = {
 }
 
 export const team: TeamMember[] = [
-  {
-    photo: '/img/foto_duda.jpeg',
-    name: 'Maria Eduarda Cavallari Quarelo',
-    rm: '570462',
-    github: 'https://github.com/dudaquarelo',
-    linkedin: 'https://www.linkedin.com/in/maria-eduarda-quarelo-678a0840a/?skipRedirect=true',
-  },
   {
     photo: '/img/foto_bianca.JPEG',
     name: 'Bianca Pereira da Silva',
@@ -27,6 +20,13 @@ export const team: TeamMember[] = [
     rm: '569370',
     github: 'https://github.com/isasouzz',
     linkedin: 'https://www.linkedin.com/in/isabelle-souza-9342a027a/',
+  },
+  {
+    photo: '/img/foto_duda.jpeg',
+    name: 'Maria Eduarda Cavallari Quarelo',
+    rm: '570462',
+    github: 'https://github.com/dudaquarelo',
+    linkedin: 'https://www.linkedin.com/in/maria-eduarda-quarelo-678a0840a/?skipRedirect=true',
   },
   {
     photo: '/img/foto_thays.jpeg',
