@@ -26,7 +26,7 @@ export const team: TeamMember[] = [
     name: 'Maria Eduarda Cavallari Quarelo',
     rm: '570462',
     github: 'https://github.com/dudaquarelo',
-    linkedin: 'https://www.linkedin.com/in/maria-eduarda-quarelo-678a0840a/?skipRedirect=true',
+    linkedin: 'https://www.linkedin.com/in/dudaquarelo?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
   },
   {
     photo: '/img/foto_thays.jpeg',
