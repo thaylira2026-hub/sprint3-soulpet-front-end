@@ -1,11 +1,17 @@
 import { useState } from 'react'
 import RewardCard from '../components/reward-card'
-import { rewards } from '../data/rewards'
+import RedeemModal from '../components/redeem-modal'
+import { rewards, type Reward } from '../data/rewards'
 
 type CategoryFilter = 'all' | 'food' | 'toy' | 'accessory' | 'donation'
 
 const Recompensas = () => {
   const [filter, setFilter] = useState<CategoryFilter>('all')
+  const [walletPoints, setWalletPoints] = useState(850)
+  const [resgatesFeitos, setResgatesFeitos] = useState(3)
+  const [pontosDoados, setPontosDoados] = useState(200)
+  const [selectedReward, setSelectedReward] = useState<Reward | null>(null)
+  const [toastMessage, setToastMessage] = useState('')
 
   const filteredRewards =
     filter === 'all' ? rewards : rewards.filter((reward) => reward.category === filter)
@@ -14,6 +20,23 @@ const Recompensas = () => {
     `rounded-full px-4 py-2 text-sm font-semibold transition ${
       filter === value ? 'bg-primary text-white' : 'bg-white text-text-body hover:bg-lilac-light'
     }`
+
+  const handleConfirmRedeem = () => {
+    if (!selectedReward) return
+
+    setWalletPoints((prev) => prev - selectedReward.points)
+
+    if (selectedReward.isDonation) {
+      setPontosDoados((prev) => prev + selectedReward.points)
+    } else {
+      setResgatesFeitos((prev) => prev + 1)
+    }
+
+    setToastMessage(`✅ ${selectedReward.name} resgatado com sucesso!`)
+    setSelectedReward(null)
+
+    setTimeout(() => setToastMessage(''), 3000)
+  }
 
   return (
     <main>
@@ -30,15 +53,17 @@ const Recompensas = () => {
         <div className="mx-auto mt-8 flex max-w-xl flex-wrap justify-center gap-6 rounded-2xl bg-white p-6 shadow-sm">
           <div className="text-center">
             <span className="block text-xs text-text-muted">Sua carteira</span>
-            <div className="font-display text-xl font-bold text-primary"><span>850</span> pts</div>
+            <div className="font-display text-xl font-bold text-primary">
+              <span>{walletPoints}</span> pts
+            </div>
           </div>
           <div className="text-center">
             <span className="block text-xs text-text-muted">Resgates feitos</span>
-            <div className="font-display text-xl font-bold text-text-dark">3</div>
+            <div className="font-display text-xl font-bold text-text-dark">{resgatesFeitos}</div>
           </div>
           <div className="text-center">
             <span className="block text-xs text-text-muted">Pontos doados</span>
-            <div className="font-display text-xl font-bold text-text-dark">200</div>
+            <div className="font-display text-xl font-bold text-text-dark">{pontosDoados}</div>
           </div>
         </div>
       </header>
@@ -80,6 +105,7 @@ const Recompensas = () => {
                 badge={reward.badge}
                 note={reward.isDonation ? 'Doe qualquer quantidade' : 'Parte do valor vai para ONGs'}
                 buttonLabel={reward.isDonation ? 'Doar pontos →' : 'Resgatar →'}
+                onRedeem={() => setSelectedReward(reward)}
               />
             ))}
           </div>
@@ -96,6 +122,23 @@ const Recompensas = () => {
           </div>
         </div>
       </section>
+
+      {selectedReward && (
+        <RedeemModal
+          emoji={selectedReward.emoji}
+          name={selectedReward.name}
+          points={selectedReward.points}
+          walletPoints={walletPoints}
+          onConfirm={handleConfirmRedeem}
+          onClose={() => setSelectedReward(null)}
+        />
+      )}
+
+      {toastMessage && (
+        <div className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2 rounded-full bg-bg-dark px-6 py-3 font-semibold text-white shadow-lg">
+          {toastMessage}
+        </div>
+      )}
     </main>
   )
 }
