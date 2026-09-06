@@ -82,7 +82,7 @@ Acesse `http://localhost:5173` no navegador. 🎉
 |---|---|---|---|
 | 👩‍💻 Bianca Pereira da Silva | 571077 | [@biancapereirasilva](https://github.com/biancapereirasilva) | [🔗 LinkedIn](https://www.linkedin.com/in/bianca-pereira-866845213/) |
 | 👩‍💻 Isabelle Souza Lima Pires Araujo | 569370 | [@isasouzz](https://github.com/isasouzz) | [🔗 LinkedIn](https://www.linkedin.com/in/isabelle-souza-9342a027a/) |
-| 👩‍💻 Maria Eduarda Cavallari Quarelo | 570462 | [@dudaquarelo](https://github.com/dudaquarelo) | [🔗 LinkedIn](https://www.linkedin.com/in/maria-eduarda-quarelo-678a0840a/?skipRedirect=true) |
+| 👩‍💻 Maria Eduarda Cavallari Quarelo | 570462 | [@dudaquarelo](https://github.com/dudaquarelo) | [🔗 LinkedIn](https://www.linkedin.com/in/dudaquarelo?utm_source=share_via&utm_content=profile&utm_medium=member_ios) |
 | 👩‍💻 Thays Lira de Oliveira | 568799 | [@thaylira2026-hub](https://github.com/thaylira2026-hub) | [🔗 LinkedIn](https://www.linkedin.com/in/thays-lira-538619186/) |
 
 🎓 **Turma:** 1TDSR-2026 · FIAP — Análise e Desenvolvimento de Sistemas
