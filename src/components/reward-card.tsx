@@ -9,9 +9,10 @@ interface RewardCardProps {
   badge?: string
   note?: string
   buttonLabel?: string
+  onRedeem?: () => void
 }
 
-const RewardCard = ({ id, emoji, name, description, points, badge, note, buttonLabel }: RewardCardProps) => {
+const RewardCard = ({ id, emoji, name, description, points, badge, note, buttonLabel, onRedeem }: RewardCardProps) => {
   const navigate = useNavigate()
 
   return (
@@ -35,7 +36,11 @@ const RewardCard = ({ id, emoji, name, description, points, badge, note, buttonL
         <button
           onClick={(e) => {
             e.stopPropagation()
-            navigate(`/recompensa/${id}`)
+            if (onRedeem) {
+              onRedeem()
+            } else {
+              navigate(`/recompensa/${id}`)
+            }
           }}
           className="mt-4 w-full rounded-full bg-primary py-2 font-semibold text-white hover:bg-secondary"
         >
