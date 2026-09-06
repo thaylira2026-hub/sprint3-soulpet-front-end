@@ -9,7 +9,7 @@ const FaqItem = ({ question, answer }: FaqItemProps) => {
   const [open, setOpen] = useState(false)
 
   return (
-    <div>
+    <div className="overflow-hidden rounded-2xl border border-border-soft bg-white shadow-sm">
       <div
         role="button"
         tabIndex={0}
@@ -20,12 +20,13 @@ const FaqItem = ({ question, answer }: FaqItemProps) => {
             setOpen(!open)
           }
         }}
+        className="flex cursor-pointer items-center justify-between px-6 py-4 font-semibold text-text-dark hover:bg-bg"
       >
         <span>{question}</span>
-        <span>{open ? '−' : '+'}</span>
+        <span className="text-xl text-primary">{open ? '−' : '+'}</span>
       </div>
       {open && (
-        <div role="region">
+        <div role="region" className="border-t border-border-soft px-6 py-4 text-sm text-text-body">
           <div>{answer}</div>
         </div>
       )}

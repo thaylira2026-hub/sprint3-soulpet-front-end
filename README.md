@@ -1,32 +1,100 @@
-# React + TypeScript + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+<img src="public/img/logo.svg" alt="SoulPet" width="320" />
 
-Currently, two official plugins are available:
+### Gamificação para o bem-estar animal
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Plataforma onde tutores de pets completam missões, acumulam pontos e trocam por recompensas reais ou doações a ONGs parceiras.
 
-## React Compiler
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+</div>
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## 📖 Sobre o projeto
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+O **SoulPet** é uma comunidade dentro da rede social **SoulUp**, focada no bem-estar animal. Nela, tutores de pets completam missões, acumulam pontos e trocam por produtos reais para seus animais — ou doam esses pontos para ONGs de proteção animal.
+
+Este repositório contém a versão **React + Vite + TypeScript** do projeto, desenvolvida para o **Challenge FIAP — 2º Semestre 2026**, na disciplina de Front-End Design Engineering (Sprint 03), migrando a aplicação original em HTML/CSS/JS para uma SPA moderna.
+
+## ✨ Funcionalidades
+
+- 🎯 **Missões** com 3 níveis de dificuldade, filtráveis por categoria
+- 🎁 **Loja de recompensas** com filtro por categoria de produto
+- 📄 **Páginas de detalhe** de missões e recompensas (rotas dinâmicas)
+- 📊 **Contador animado** de estatísticas na Home
+- ❓ **FAQ em accordion** interativo
+- ✉️ **Formulário de contato** com validação em tempo real
+- 📱 **Totalmente responsivo** (mobile, tablet e desktop)
+
+## 🚀 Tecnologias utilizadas
+
+| Tecnologia | Finalidade |
+|---|---|
+| ⚛️ **React** | Construção da interface e componentização |
+| ⚡ **Vite** | Build tool e servidor de desenvolvimento |
+| 🔷 **TypeScript** | Tipagem estática e segurança do código |
+| 🎨 **Tailwind CSS** | Estilização utilitária e responsiva |
+| 🧭 **React Router DOM** | Navegação SPA e rotas dinâmicas |
+| 📋 **React Hook Form** | Validação do formulário de contato |
+
+## 📁 Estrutura de pastas
+
+```
+src/
+├── components/     # Componentes reutilizáveis (Header, Footer, Cards, etc.)
+├── pages/          # Páginas da aplicação (Home, Sobre, Missões, etc.)
+├── data/           # Dados centralizados (missões, recompensas, equipe, FAQ)
+├── App.tsx         # Configuração das rotas
+├── main.tsx        # Ponto de entrada da aplicação
+└── index.css       # Configuração do Tailwind e design tokens
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## 💻 Como executar localmente
+
+```bash
+# 1. Clone o repositório
+git clone https://github.com/thaylira2026-hub/sprint3-soulpet-front-end.git
+
+# 2. Entre na pasta do projeto
+cd sprint3-soulpet-front-end
+
+# 3. Instale as dependências
+npm install
+
+# 4. Rode o projeto em ambiente de desenvolvimento
+npm run dev
+```
+
+Acesse `http://localhost:5173` no navegador. 🎉
+
+## 🔗 Repositório
+
+🔗 [github.com/thaylira2026-hub/sprint3-soulpet-front-end](https://github.com/thaylira2026-hub/sprint3-soulpet-front-end)
+
+## 👥 Integrantes
+
+| Nome | RM | GitHub | LinkedIn |
+|---|---|---|---|
+| 👩‍💻 Bianca Pereira da Silva | 571077 | [@biancapereirasilva](https://github.com/biancapereirasilva) | [🔗 LinkedIn](https://www.linkedin.com/in/bianca-pereira-866845213/) |
+| 👩‍💻 Isabelle Souza Lima Pires Araujo | 569370 | [@isasouzz](https://github.com/isasouzz) | [🔗 LinkedIn](https://www.linkedin.com/in/isabelle-souza-9342a027a/) |
+| 👩‍💻 Maria Eduarda Cavallari Quarelo | 570462 | [@dudaquarelo](https://github.com/dudaquarelo) | [🔗 LinkedIn](https://www.linkedin.com/in/maria-eduarda-quarelo-678a0840a/?skipRedirect=true) |
+| 👩‍💻 Thays Lira de Oliveira | 568799 | [@thaylira2026-hub](https://github.com/thaylira2026-hub) | [🔗 LinkedIn](https://www.linkedin.com/in/thays-lira-538619186/) |
+
+🎓 **Turma:** 1TDSR-2026 · FIAP — Análise e Desenvolvimento de Sistemas
+
+## 📩 Contato
+
+Dúvidas ou sugestões sobre o projeto? 📧 **soulpet@fiap.com.br**
+
+---
+
+<div align="center">
+
+Feito com 💜 pela equipe SoulPet
+
+</div>
