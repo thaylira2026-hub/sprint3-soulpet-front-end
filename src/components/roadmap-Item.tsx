@@ -6,10 +6,10 @@ interface RoadmapItemProps {
 
 const RoadmapItem = ({ icon, title, status }: RoadmapItemProps) => {
   return (
-    <div>
-      <div><span>{icon}</span></div>
-      <div>{title}</div>
-      <div>{status}</div>
+    <div className="rounded-2xl border border-border-soft bg-white p-5 text-center shadow-sm">
+      <div className="text-3xl">{icon}</div>
+      <div className="mt-2 font-display font-bold text-text-dark">{title}</div>
+      <div className="mt-1 text-sm text-text-muted">{status}</div>
     </div>
   )
 }
