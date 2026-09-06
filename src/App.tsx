@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/header'
 import Footer from './components/footer'
+import ScrollToTopButton from './components/scroll-to-top-button'
 import Home from './pages/home'
 import Sobre from './pages/sobre'
 import Faq from './pages/faq'
@@ -29,6 +30,7 @@ const App = () => {
       </Routes>
 
       <Footer />
+      <ScrollToTopButton />
     </div>
   )
 }
