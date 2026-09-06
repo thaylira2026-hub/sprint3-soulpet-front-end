@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  export interface Reward {
+=======
+export interface Reward {
+>>>>>>> 3cbb5995e9ed8be8e2025210cd4a953dcb63c378
   id: string
   emoji: string
   name: string
@@ -22,5 +26,9 @@ export const rewards: Reward[] = [
   { id: '10', emoji: '🥣', name: 'Comedouro Duplo Inox', description: 'Conjunto com comedouro e bebedouro de aço inoxidável com suporte antiderrapante.', points: 220, category: 'accessory' },
   { id: '11', emoji: '❤️', name: 'Doe para ONG Patas Amigas', description: 'Seus pontos viram ração e produtos para pets em situação de abandono.', points: 100, category: 'donation', isDonation: true },
   { id: '12', emoji: '🐕', name: 'Doe para Projeto Vida Animal', description: 'Apoie cuidados veterinários para animais resgatados de maus-tratos.', points: 100, category: 'donation', isDonation: true },
+<<<<<<< HEAD
 ]
 
+=======
+]
+>>>>>>> 3cbb5995e9ed8be8e2025210cd4a953dcb63c378
