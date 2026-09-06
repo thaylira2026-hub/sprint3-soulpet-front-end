@@ -124,7 +124,13 @@ const Home = () => {
 
           <div className="mt-10 grid grid-cols-2 gap-6 md:grid-cols-4">
             {featuredRewards.map((reward) => (
-              <RewardCard key={reward.name} emoji={reward.emoji} name={reward.name} points={reward.points} />
+              <RewardCard
+                key={reward.id}
+                id={reward.id}
+                emoji={reward.emoji}
+                name={reward.name}
+                points={reward.points}
+              />
             ))}
           </div>
 

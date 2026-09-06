@@ -16,7 +16,7 @@ const RewardCard = ({ id, emoji, name, description, points, badge, note, buttonL
 
   return (
     <article
-      onClick={() => navigate(/recompensa/${id})}
+      onClick={() => navigate(`/recompensa/${id}`)}
       className="relative cursor-pointer rounded-2xl border border-border-soft bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-md"
     >
       {badge && (
@@ -24,18 +24,18 @@ const RewardCard = ({ id, emoji, name, description, points, badge, note, buttonL
           {badge}
         </span>
       )}
-      
+
       <span className="text-4xl">{emoji}</span>
       <div className="mt-2 font-display font-bold text-text-dark">{name}</div>
       {description && <div className="mt-1 text-sm text-text-body">{description}</div>}
       <div className="mt-3 font-display text-lg font-bold text-primary">{points} pts</div>
       {note && <span className="mt-1 block text-xs text-text-muted">{note}</span>}
-     
+
       {buttonLabel && (
         <button
           onClick={(e) => {
             e.stopPropagation()
-            navigate(/recompensa/${id})
+            navigate(`/recompensa/${id}`)
           }}
           className="mt-4 w-full rounded-full bg-primary py-2 font-semibold text-white hover:bg-secondary"
         >

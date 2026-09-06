@@ -8,7 +8,7 @@ export interface TeamMember {
 
 export const team: TeamMember[] = [
   {
-    photo: '/img/foto_bianca.JPEG',
+    photo: '/img/foto_bianca.jpeg',
     name: 'Bianca Pereira da Silva',
     rm: '571077',
     github: 'https://github.com/biancapereirasilva',
