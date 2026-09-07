@@ -1,8 +1,12 @@
- import { useParams, Link } from 'react-router-dom'
+import { useState } from 'react'
+import { useParams, Link } from 'react-router-dom'
 import { rewards } from '../data/rewards'
+import RedeemModal from '../components/redeem-modal'
 
 const RecompensaDetalhe = () => {
   const { id } = useParams()
+  const [showModal, setShowModal] = useState(false)
+  const [walletPoints, setWalletPoints] = useState(850)
   const reward = rewards.find((r) => r.id === id)
 
   if (!reward) {
@@ -15,6 +19,11 @@ const RecompensaDetalhe = () => {
         </Link>
       </main>
     )
+  }
+
+  const handleConfirmRedeem = () => {
+    setWalletPoints((prev) => prev - reward.points)
+    setShowModal(false)
   }
 
   return (
@@ -34,10 +43,24 @@ const RecompensaDetalhe = () => {
         <p className="mt-3 text-text-body">{reward.description}</p>
         <div className="mt-6 font-display text-2xl font-bold text-primary">{reward.points} pts</div>
 
-        <button className="mt-6 rounded-full bg-primary px-8 py-3 font-semibold text-white hover:bg-secondary">
+        <button
+          onClick={() => setShowModal(true)}
+          className="mt-6 rounded-full bg-primary px-8 py-3 font-semibold text-white hover:bg-secondary"
+        >
           {reward.isDonation ? 'Doar pontos' : 'Resgatar recompensa'}
         </button>
       </div>
+
+      {showModal && (
+        <RedeemModal
+          emoji={reward.emoji}
+          name={reward.name}
+          points={reward.points}
+          walletPoints={walletPoints}
+          onConfirm={handleConfirmRedeem}
+          onClose={() => setShowModal(false)}
+        />
+      )}
     </main>
   )
 }
