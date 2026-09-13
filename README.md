@@ -92,8 +92,13 @@ Acesse `http://localhost:5173` no navegador. 🎉
 
 ## 🔗 Repositório
 
-🔗 [github.com/thaylira2026-hub/sprint3-soulpet-front-end](https://github.com/thaylira2026-hub/sprint3-soulpet-front-end)
+[github.com/thaylira2026-hub/sprint3-soulpet-front-end](https://github.com/thaylira2026-hub/sprint3-soulpet-front-end)
 
+---
+
+## 🎬 Vídeo de Demonstração
+
+[Assista ao vídeo no YouTube](https://youtu.be/7plPFeuWLFE?si=CA5AQEh89qzW2lZt)
 ## 👥 Integrantes
 
 | Foto | Nome | RM | GitHub | LinkedIn |
